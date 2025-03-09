@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
 
-const Leaderboard = () => {
+const LeaderboardView = () => {
   return (
     <Container>
       <Typography variant="h4">Leaderboard</Typography>
@@ -10,4 +10,4 @@ const Leaderboard = () => {
   );
 };
 
-export default Leaderboard;
+export default LeaderboardView;

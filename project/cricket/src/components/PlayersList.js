@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
 
-const Players = () => {
+const PlayersList = () => {
   return (
     <Container>
       <Typography variant="h4">Players List</Typography>
@@ -10,4 +10,4 @@ const Players = () => {
   );
 };
 
-export default Players;
+export default PlayersList;
