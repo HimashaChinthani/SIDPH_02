@@ -13,7 +13,7 @@ const AdminPlayersView = () => {
   }, []);
 
   return (
-    <div>
+    <div className="AdminBody">
       <h2>Players List</h2>
       <table>
         <thead>
