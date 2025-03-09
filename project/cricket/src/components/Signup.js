@@ -5,7 +5,7 @@ import '../css/Signup.css';
 
 import CrickeImage from '../images/cricketsignup.png'; // Import the image
 
-const Signup = () => {
+function Signup() {
   const [formData, setFormData] = useState({ username: '', password: '', confirmPassword: '' });
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -27,16 +27,16 @@ const Signup = () => {
 
     try {
       // Check if the username is already registered
-      const checkUser = await axios.get(`http://localhost:5000/api/check-username/${formData.username}`);
+      // const checkUser = await axios.get(`http://localhost:5000/api/check-username/${formData.username}`);
 
-      if (checkUser.data.exists) {
-        setMessage("Username already taken. Please try another one.");
-        setIsLoading(false);
-        return;
-      }
+      // if (checkUser.data.exists) {
+      //   setMessage("Username already taken. Please try another one.");
+      //   setIsLoading(false);
+      //   return;
+      // }
 
       // If the username is available, proceed with signup
-      const response = await axios.post('http://localhost:5000/api/signup', formData);
+      const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
       setMessage(response.data.message);
 
       setTimeout(() => {

@@ -1,9 +1,8 @@
 // PlayersView.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import '../css/adminview.css';
 
-const AdminPlayersView = () => {
+const PlayersView = () => {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
@@ -37,4 +36,4 @@ const AdminPlayersView = () => {
   );
 };
 
-export default AdminPlayersView;
+export default PlayersView;
