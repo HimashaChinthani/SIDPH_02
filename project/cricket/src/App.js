@@ -5,7 +5,7 @@ import AdminPlayersView from "./components/AdminPlayersView";
 import AdminPlayerStatus from "./components/AdminPlayerStatus";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Players from "./components/players";
+import Players from "./components/Players";
 import PlayersList from "./components/PlayersList";
 import PlayersView from "./components/playersview";
 import PlayerDetail from "./components/playerDetail";
