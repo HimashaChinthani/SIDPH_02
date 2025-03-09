@@ -1,25 +1,30 @@
 import React, { useState } from "react";
-import "../Chatbox.css";
-const Chatbot = () => {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
+import axios from "axios";
 
-  const sendMessage = () => {
-    setMessages([...messages, { text: input, sender: "user" }]);
-    // Call the backend for the bot response
-    // For example, axios.post("/api/chat", { message: input })
-    setInput(""); // Reset input
+const Chatbot = () => {
+  const [message, setMessage] = useState("");
+  const [response, setResponse] = useState("");
+
+  const sendMessage = async () => {
+    try {
+      const res = await axios.post("http://localhost:5000/api/chatbot", { message });
+      setResponse(res.data.reply);
+    } catch (error) {
+      console.error("Error sending message", error);
+    }
   };
 
   return (
-    <div>
-      <div>
-        {messages.map((message, idx) => (
-          <div key={idx}>{message.text}</div>
-        ))}
-      </div>
-      <input value={input} onChange={(e) => setInput(e.target.value)} />
+    <div className="chat-container">
+      <h2>Spiriter Chatbot</h2>
+      <input
+        type="text"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        placeholder="Ask about a player or best team"
+      />
       <button onClick={sendMessage}>Send</button>
+      <p>Response: {response}</p>
     </div>
   );
 };
