@@ -1,0 +1,50 @@
+:root {
+    /* Primary Colors */
+    --primary-blue: #1E3A8A;
+    --secondary-blue: #3B82F6;
+    --dark-blue: #1E40AF;
+    --light-blue: #BFDBFE;
+    --sky-blue: #93C5FD;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: var(--dark-blue);
+  }
+  
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--sky-blue);
+  }
+  
+  th {
+    background-color: var(--primary-blue);
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: var(--light-blue);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: var(--sky-blue);
+  }
