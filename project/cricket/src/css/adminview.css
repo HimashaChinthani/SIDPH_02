@@ -7,7 +7,7 @@
     --sky-blue: #93C5FD;
   }
   
-  body {
+  .AdminBody {
     font-family: Arial, sans-serif;
     background-color: var(--light-blue);
     color: var(--primary-blue);
@@ -15,12 +15,12 @@
     padding: 20px;
   }
   
-  h2 {
+  .AdminBody h2 {
     text-align: center;
     color: var(--dark-blue);
   }
   
-  table {
+  .AdminBody table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
@@ -30,21 +30,21 @@
     overflow: hidden;
   }
   
-  th, td {
+  .AdminBody th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid var(--sky-blue);
   }
   
-  th {
+  .AdminBody th {
     background-color: var(--primary-blue);
     color: white;
   }
   
-  tr:hover {
+  .AdminBody tr:hover {
     background-color: var(--light-blue);
   }
   
-  tbody tr:nth-child(even) {
+  .AdminBody tbody tr:nth-child(even) {
     background-color: var(--sky-blue);
   }
