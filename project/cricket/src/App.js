@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard";
 import Players from "./components/Players";
 import TeamSelection from "./components/TeamSelection";
 import Leaderboard from "./components/Leaderboard";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -33,6 +34,10 @@ function App() {
           <Route
             path="/leaderboard"
             element={isAuthenticated ? <Leaderboard /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/chatbot"
+            element={isAuthenticated ? <Chatbot /> : <Navigate to="/login" />}
           />
           <Route path="/" element={<Navigate to="/login" />} />
         </Routes>
