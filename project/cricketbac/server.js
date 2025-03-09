@@ -10,6 +10,6 @@ app.use(cors());
 app.use('/api/auth', authRoutes);
 app.use('/api/players', playerRoutes);
 
-mongoose.connect('mongodb://localhost:27017/spirit11', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/cricket', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(5000, () => console.log('Server running on port 5000')))
   .catch(err => console.log(err));
