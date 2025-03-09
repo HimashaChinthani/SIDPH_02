@@ -1,50 +1,116 @@
 :root {
-    /* Primary Colors */
-    --primary-blue: #1E3A8A;
-    --secondary-blue: #3B82F6;
-    --dark-blue: #1E40AF;
-    --light-blue: #BFDBFE;
-    --sky-blue: #93C5FD;
-  }
-  
+  /* Primary Colors */
+  --primary-blue: #1E3A8A;
+  --secondary-blue: #3B82F6;
+  --dark-blue: #1E40AF;
+  --light-blue: #BFDBFE;
+  --sky-blue: #93C5FD;
+  --white: #FFFFFF;
+  --light-gray: #F3F4F6;
+  --gray: #D1D5DB;
+  --dark-gray: #4B5563;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+h2 {
+  color: var(--primary-blue);
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Admin Players View */
+.AdminBody {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: var(--secondary-blue);
+  outline: none;
+}
+
+/* Players Table */
+.players-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+th {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+td {
+  background-color: var(--light-blue);
+  color: var(--dark-gray);
+  border-bottom: 1px solid var(--gray);
+}
+
+tr:hover td {
+  background-color: var(--sky-blue);
+}
+
+/* Empty Search Result */
+.no-players-found {
+  text-align: center;
+  font-style: italic;
+  color: var(--dark-gray);
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .AdminBody {
-    font-family: Arial, sans-serif;
-    background-color: var(--light-blue);
-    color: var(--primary-blue);
-    margin: 0;
-    padding: 20px;
+    padding: 15px;
+    margin: 20px;
   }
-  
-  .AdminBody h2 {
-    text-align: center;
-    color: var(--dark-blue);
+
+  .search-bar {
+    width: 100%;
   }
-  
-  .AdminBody table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+
+  h2 {
+    font-size: 24px;
   }
-  
-  .AdminBody th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid var(--sky-blue);
+
+  th, td {
+    font-size: 14px;
+    padding: 10px;
   }
-  
-  .AdminBody th {
-    background-color: var(--primary-blue);
-    color: white;
-  }
-  
-  .AdminBody tr:hover {
-    background-color: var(--light-blue);
-  }
-  
-  .AdminBody tbody tr:nth-child(even) {
-    background-color: var(--sky-blue);
-  }
+}

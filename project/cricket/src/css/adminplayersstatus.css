@@ -1,0 +1,98 @@
+:root {
+    /* Primary Colors */
+    --primary-blue: #1E3A8A;
+    --secondary-blue: #3B82F6;
+    --dark-blue: #1E40AF;
+    --light-blue: #BFDBFE;
+    --sky-blue: #93C5FD;
+    --white: #FFFFFF;
+    --light-gray: #F3F4F6;
+    --gray: #D1D5DB;
+    --dark-gray: #4B5563;
+    --accent-color: #FFB84D; /* Accent color for highlights */
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+  }
+  
+  h2 {
+    color: var(--primary-blue);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Player Stats Container */
+  .player-stats-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Loading State */
+  .loading {
+    text-align: center;
+    font-size: 24px;
+    color: var(--secondary-blue);
+    font-weight: bold;
+    margin-top: 50px;
+  }
+  
+  /* Player Stats Section */
+  .player-stats {
+    background-color: var(--light-blue);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Stat Items */
+  .stat-item {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--dark-gray);
+  }
+  
+  .stat-item strong {
+    color: var(--primary-blue);
+  }
+  
+  /* Accent for Points and Value */
+  .stat-item:nth-child(5), .stat-item:nth-child(6) {
+    color: var(--accent-color);
+    font-weight: bold;
+  }
+  
+  .stat-item span {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-blue);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .player-stats-container {
+      padding: 15px;
+      margin: 20px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    .stat-item {
+      font-size: 16px;
+    }
+  }
+  
